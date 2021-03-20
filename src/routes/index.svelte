@@ -15,7 +15,10 @@
   }
 </script>
 
+
 <script>
+  import Layout from "../components/Layout.svelte";
+  import ListItem from "../components/ListItem.svelte";
   export let list;
 </script>
 
@@ -26,6 +29,7 @@
 <h1>Kom o köp propellerhattar</h1>
 
 <List {list} />
+<!-- <Layout {list}/> -->
 
 <style>
   h1,

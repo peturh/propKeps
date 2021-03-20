@@ -3,6 +3,11 @@
   export let list;
 </script>
 
+
+<style>
+
+</style>
+
 <ul>
   {#each list as listItem}
     <ListItem {listItem} />

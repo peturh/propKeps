@@ -12,6 +12,7 @@
     "compression": "^1.7.1",
     "express": "^4.17.1",
     "polka": "next",
+    "rxjs": "^6.6.6",
     "sirv": "^1.0.0"
   },
   "devDependencies": {
