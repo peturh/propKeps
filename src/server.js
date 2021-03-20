@@ -10,7 +10,7 @@ const dev = NODE_ENV === 'development';
 const app = polka();
 
 app.get('/propkeps', (req, res) => {
-  res.end(data);
+  res.end(JSON.stringify(data));
 });
 
 app.use(compression({ threshold: 0 }), sirv('static', { dev }), sapper.middleware()).listen(PORT, (err) => {

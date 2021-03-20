@@ -1,5 +1,5 @@
 <script context="module">
-  import successkid from 'images/successkid.jpg';
+  import List from '../components/List.svelte';
   export async function preload() {
     // the `slug` parameter is available because
     // this file is called [slug].svelte
@@ -7,7 +7,7 @@
     const data = await res.json();
 
     if (res.status === 200) {
-      return { post: data };
+      return { list: data };
     } else {
       console.log('whats this', res.status);
       this.error(res.status, data.message);
@@ -15,18 +15,17 @@
   }
 </script>
 
+<script>
+  export let list;
+</script>
+
 <svelte:head>
   <title>Sapper project template</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>Kom o köp propellerhattar</h1>
 
-<figure>
-  <img alt="Success Kid" src={successkid} />
-  <figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<List {list} />
 
 <style>
   h1,
